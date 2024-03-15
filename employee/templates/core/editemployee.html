@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+{% block title %}Edit Employee{% endblock title %}
+{% block main_content %}
+<section class="container">
+    <div class="row  justify-content-around text-center text-black mt-5">
+        <div class=" col-8 border rounded bg-white p-1">
+        <h3>CRUD Project In python Django</h3>
+       </div>
+    </div>
+    <div class="row justify-content-around mt-3">
+        <div class="col-sm-4 bg-white rounded shadow p-3">
+            <form action="" method="POST" >
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" value="Submit" class="btn btn-primary " >
+                <a href="{% url 'home' %}" class="btn float-end btn-secondary">Home</a>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock main_content %}
